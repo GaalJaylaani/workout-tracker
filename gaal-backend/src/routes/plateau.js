@@ -20,11 +20,16 @@ router.post("/assess/:userId", authMiddleware, async(req, res)  => {
         )
         `)
     .eq('workouts.user_id', userId)
+    
+    const { data: data2, error: error3 } = await supabase
+    .from('meals')
+    .select()
+    .eq('user_id', req.params.userId)
 
-    if (error) {
+    if (error || error3) {
         res.status(500).send("Something went wrong")
     } else {
-        const verdict = await assessPlateau(data)
+        const verdict = await assessPlateau(data, data2)
         const { data: assessment , error: error2 } = await supabase
         .from('plateau_assessments')
         .insert({
