@@ -1,0 +1,60 @@
+.all-events {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.allworkout-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.workout-item {
+    border: 1px solid #cfd9e6;
+    border-left: 6px solid rgba(251, 146, 60, 0.6);
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.workout-item h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #38506a;
+}
+
+.workout-item p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #5a6b7d;
+}
+
+.exercises-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 6px;
+}
+
+.exercise-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.exercise-name {
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+    color: #38506a;
+    text-transform: uppercase;
+}
+
+.exercise-stats {
+    font-size: 0.8rem;
+    color: #5a6b7d;
+}
