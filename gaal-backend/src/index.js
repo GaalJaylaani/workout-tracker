@@ -7,7 +7,7 @@ import plateauRoutes from './routes/plateau.js'
 import authRoutes from './routes/auth.js'
 import mealRoutes from './routes/meals.js'
 
-dotenv.config()
+dotenv.config({ path: new URL('../.env', import.meta.url), override: true })
 
 const app = express()
 app.use(cors())

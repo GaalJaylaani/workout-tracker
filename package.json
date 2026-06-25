@@ -2,11 +2,14 @@
   "name": "workout-tracker",
   "version": "1.0.0",
   "description": "",
-  "main": "gaa;-backend/src/index.js",
+  "main": "gaal-backend/src/index.js",
   "scripts": {
     "dev": "nodemon gaal-backend/src/index.js",
     "start": "node gaal-backend/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "apex": "./gaal-backend/cli/index.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,7 @@
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
     "@supabase/supabase-js": "^2.108.2",
+    "commander": "^15.0.0",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1"
