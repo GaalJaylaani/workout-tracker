@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      display: flex;
+      margin: 0;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 220px;
+      background: #0d0d0d;
+      min-height: 100vh;
+    }
+
+    .content {
+      flex: 1;
+      padding: 24px;
+      background: #000;
+      color: white;
+      font-family: sans-serif;
+    }
+
+    .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 16px;
+  }
+
+  .card-label {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #888;
+    text-transform: uppercase;
+  }
+
+  .card-value {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 8px 0;
+  }
+
+  .card-goal {
+    font-size: 12px;
+    color: #666;
+  }
+
+  .bottom-row {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;  /* right panel a bit wider than left */
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .panel {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .panel-title {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .legend-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-top: 1px solid #222;
+  }
+
+  .legend-row:first-of-type {
+    border-top: none;
+  }
+
+  .dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  .chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    height: 120px;
+    margin-bottom: 16px;
+  }
+
+  .bar-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+  }
+
+  .bar {
+    width: 100%;
+    background: #84cc16;
+    border-radius: 4px 4px 0 0;
+  }
+
+  .bar-label {
+    font-size: 11px;
+    color: #888;
+    margin-top: 8px;
+  }
+
+  .no-meals {
+    text-align: center;
+    color: #888;
+    padding-top: 16px;
+    border-top: 1px solid #222;
+  }
+
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .log-meal-btn {
+    background: #a3e635;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+
+  <nav class="sidebar">
+    <!-- logo, nav links -->
+  </nav>
+
+    <main class="content">
+    <div class="header-row">
+        <div>
+        <h1>NUTRITION</h1>
+        <p>Daily macro tracking</p>
+        </div>
+        <button class="log-meal-btn">+ Log Meal</button>
+    </div>
+
+    <div class="stats-grid">
+    <div class="card">
+      <div class="card-label">Calories</div>
+      <div class="card-value">0 <span style="font-size:14px;">kcal</span></div>
+      <div class="card-goal">Goal: 2,200</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Protein</div>
+      <div class="card-value" style="color:#a3e635;">0 <span style="font-size:14px;">g</span></div>
+      <div class="card-goal">Goal: 180g</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Carbs</div>
+      <div class="card-value">0 <span style="font-size:14px;">g</span></div>
+      <div class="card-goal">—</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Fat</div>
+      <div class="card-value">0 <span style="font-size:14px;">g</span></div>
+      <div class="card-goal">—</div>
+    </div>
+  </div>
+
+  <div class="bottom-row">
+
+  <div class="panel">
+    <div class="panel-title">Today's Macros</div>
+
+    <div class="legend-row">
+      <span><span class="dot" style="background:#a3e635;"></span>Protein</span>
+      <span>0g</span>
+    </div>
+    <div class="legend-row">
+      <span><span class="dot" style="background:#818cf8;"></span>Carbs</span>
+      <span>0g</span>
+    </div>
+    <div class="legend-row">
+      <span><span class="dot" style="background:#fb923c;"></span>Fat</span>
+      <span>0g</span>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">7-Day Calorie Trend</div>
+
+    <div class="chart">
+      <div class="bar-wrap">
+        <div class="bar" style="height: 60%;"></div>
+        <div class="bar-label">Jun 24</div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar" style="height: 55%;"></div>
+        <div class="bar-label">Jun 25</div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar" style="height: 65%;"></div>
+        <div class="bar-label">Jun 26</div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar" style="height: 58%;"></div>
+        <div class="bar-label">Jun 27</div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar" style="height: 62%;"></div>
+        <div class="bar-label">Jun 28</div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar" style="height: 50%;"></div>
+        <div class="bar-label">Jun 29</div>
+      </div>
+      <div class="bar-wrap">
+        <div class="bar" style="height: 0%;"></div>
+        <div class="bar-label">Jun 30</div>
+      </div>
+    </div>
+
+    <div class="no-meals">No meals logged today</div>
+  </div>
+
+</div>
+
+
+  </main>
+
+</body>
+</html>
