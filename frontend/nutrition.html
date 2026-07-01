@@ -12,7 +12,73 @@
       width: 220px;
       background: #0d0d0d;
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0;
+      box-sizing: border-box;
     }
+
+
+    .logo-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px 20px 20px;
+  }
+
+  .logo-icon {
+    background: #a3e635;
+    color: #000;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  .logo-text {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .logo-sub {
+    color: #555;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 0 20px 20px 20px;
+    margin-top: -14px;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .nav-link.active {
+    background: #a3e635;
+    color: #000;
+    font-weight: bold;
+  }
+
+  .sign-out {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+  }
 
     .content {
       flex: 1;
@@ -151,7 +217,18 @@
 <body>
 
   <nav class="sidebar">
-    <!-- logo, nav links -->
+        <div class="logo-row">
+        <div class="logo-icon">⚡</div>
+        <div class="logo-text">APEX</div>
+    </div>
+    <div class="logo-sub">WORKOUT · NUTRITION · AI</div>
+
+    <a href="#" class="nav-link">Dashboard</a>
+    <a href="#" class="nav-link">Workout</a>
+    <a href="#" class="nav-link active">Nutrition</a>
+    <a href="#" class="nav-link">Plateau AI</a>
+
+    <a href="#" class="sign-out">Sign Out</a>
   </nav>
 
     <main class="content">
