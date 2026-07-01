@@ -3,8 +3,8 @@ import "./index.css";
 export default function Workout() {
   return (
     <div>
-      <div className="flex flex-row items-center justify-center">
-        <h1 className="font-display text-4xl font-bold tracking-wide">Workout Tracker</h1>
+      <div className="flex flex-row items-center justify-between mb-6">
+        <h1 className="font-display text-4xl font-bold tracking-wide ml-8 mr-10">Workout Tracker</h1>
         <button
           class="flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2.5 rounded-xl text-sm font-semibold hover:opacity-90 transition-opacity"
           data-fg-d3bl98="0.8:1.51754:/src/app/App.tsx:689:9:21014:297:e:button:et"
@@ -28,7 +28,7 @@ export default function Workout() {
             <path d="M12 5v14"></path>
           </svg>
           Log Workout
-        </button>{" "}
+        </button>
       </div>
              
     <div className="bg-card border border-border rounded-2xl p-6 space-y-5">
